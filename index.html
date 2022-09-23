@@ -1,0 +1,3003 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ecommerce websit</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <!-- Demo styles -->
+    <style>
+      .parent{
+        padding:20px;
+        margin:20px;
+        
+      }
+      .topbar{
+        display: flex;
+        
+        justify-content: flex-end;
+        padding:5px;
+        margin:5px;
+        font-size: 15px;
+        text-transform: capitalize;
+        margin-top: -35px;
+        margin-right: 20px;
+        
+      }
+
+      .topbar1{
+       
+        padding:5px;
+        margin:5px;
+        position: relative;
+      }
+      .topbar2{
+       
+        padding:5px;
+        margin:5px;
+        position: relative;
+      }
+      .topbar1:hover{
+        color: dodgerblue;
+      }
+      .topbar1:hover .demosicon{
+        visibility: visible;
+      }
+      .topbar2:hover .demosicon1{
+        display: block;
+      }
+      .demosicon{
+        z-index: 9999999999999;
+        border-top: 4px solid dodgerblue;
+        display:grid;
+        grid-template-columns: 200px 200px 200px;
+       
+        position: absolute;
+        top:30px;
+        left:-1100px;
+        background-color: white;
+        padding:5px;
+        padding-right: 40px;
+        padding-left: 40px;
+        margin:5px;
+        width: 1190px;
+        height: 350px;
+        column-gap: 195px;
+        visibility: hidden;
+      }
+      .demosicon1{
+        z-index: 999999999999999999;
+        border-top: 4px solid dodgerblue;
+        display: none;
+        position: absolute;
+        top:35px;
+        right:-40px;
+        background-color: white;
+        padding:5px;
+        margin:5px;
+        width: 369px;
+        height: 200px;
+
+      }
+      .main{
+        color:slategray;
+        position: relative;
+        width:340px;
+        height: 70px;
+        /* background-color: red; */
+        padding:10px;
+        margin:5px;
+        border:1px solid rgba(0,0,0,0.1);
+      }
+      
+      .main1,.maincontent{
+position: absolute;
+      }
+      .main1:hover{
+        color:dodgerblue;
+      }
+      .main1{
+        top:2px;
+        left:60px;
+        font-size: 15px;
+        font-weight: 900;
+        text-transform: capitalize;
+
+      }
+      .maincontent{
+        top:30px;
+        left:60px;
+      }
+       body,html{
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: white;
+            
+        }
+        /* body::-webkit-scrollbar{
+            width:20px;
+            border-radius:20px;
+        }
+        body::-webkit-scrollbar-button{
+background-color:lightgoldenrodyellow;
+width:10px;
+border-radius:20px;
+        }
+        body::-webkit-scrollbar-thumb{
+           background-color: orangered;
+width:10px;
+border-radius:20px;
+        }
+        body::-webkit-scrollbar-track{
+            background-color: white;
+            width:10px;
+            border-radius:20px;
+        }
+        body::-webkit-scrollbar-corner{
+            background-color: yellow;
+            width:10px;
+            border-radius:20px;
+        } */
+        body{
+        
+      
+      background-color:white;
+            color:black;
+        }
+       
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+       
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      #home{
+      /* overflow: hidden; */
+     
+    
+      width: 100%;
+      z-index:999999999;
+   
+      }
+      #home1{
+        display: none;
+      }
+      #head{
+        background-color:white;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        position: relative;
+        margin-top: -5px;
+        padding-right: 30px;
+        padding-left: 80px;
+      position:fixed;
+      top:45px;
+z-index:9999999
+      }
+
+#listbar,#remover{
+  display: none;
+}
+
+
+
+     
+
+
+.left{
+        position:absolute;
+        top:2px;
+        left:128px;
+        animation: left22 2s linear infinite;
+        animation-timing-function: ease-in-out;
+        
+      }
+      
+ 
+ .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8{  
+  font-size:15px;  
+  padding:20px;
+  margin:5px;
+  text-transform: capitalize;
+  /* position:relative; */
+  
+ }
+ .div7,.aboutget{
+  font-weight: 900;
+  border-radius: 10px;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 15px;
+    padding: 13px;
+    /* margin: 12px; */
+    text-transform: capitalize;
+    border: none;
+    margin-top: 2px;
+    z-index:99;
+    cursor: pointer;
+    /* overflow: hidden; */
+ }
+
+ 
+.div7:hover{
+     margin-top:-1px;
+    
+
+ }
+ 
+      .div2,.div3,.div4,.div5,.div6{
+        display: flex;
+        justify-content: center;
+      
+      }
+:is(.div1,.div2,.div3,.div4,.div5,.div6):hover{
+  color:dodgerblue;
+}
+#header2,#header3,#header4,#header5,#header6,#header7{
+  position: relative;
+}
+.div2:hover .compannyworks{
+  visibility: visible;
+}
+#header3:hover .compannyworks2{
+  display: block;
+}
+#header4:hover .compannyworks3{
+  display: block;
+}
+#header5:hover .compannyworks4{
+  display: block;
+}
+#header6:hover .compannyworks5{
+  display: block;
+}
+#header7:hover .compannyworks6{
+  display: block;
+}
+.compannyworks{
+ background-color:white;
+ border-top: 4px solid dodgerblue;
+ display: flex;
+margin-left: 20px;
+z-index:99;
+}
+ul{
+  padding-left:15px;
+  margin:10px;
+  width:150px;
+  text-align: left;
+}
+li{
+  color:slategray;
+  list-style-type: none;
+  padding:10px;
+  margin:5px;
+  text-align: left;
+  width: 90%;
+}
+li:hover{
+  background-color:aliceblue
+}
+
+.compannyworks1{
+  position: absolute;
+top:55px;
+left:-400px;
+visibility: hidden;
+  }
+.compannyworks2{
+  position: absolute;
+top:54px;
+left:-16px;
+display: none;
+}
+.compannyworks3{
+  position: absolute;
+top:54px;
+left:-16px;
+display: none;
+}
+.compannyworks4{
+  position: absolute;
+top:50px;
+right:-30px;
+display: none;
+}
+.compannyworks5{
+  position: absolute;
+top:50px;
+right:-41px;
+display: none;
+}
+.compannyworks6{
+  position: absolute;
+top:50px;
+right:-21px;
+display: none;
+}
+.langimg{
+  position: relative;
+}
+.landingimg{
+  width:650px;
+  height: 430px;
+  float: left;
+}
+.brand{
+  position: absolute;
+  top:120px;
+  left:140px;
+  text-align: center;
+  
+}
+.brandwrk{
+  font-size: 30px;
+  font-size: 900;
+  color: #000;
+}
+.brndcontent,.brndcontent1{
+  color: slategray;
+}
+.lrnmore{
+  border:none;
+  padding:20px;
+  border-radius: 10px;
+  color: white;
+  margin:10px;
+  text-transform: capitalize;
+  font-size: 20px;
+  background-color: dodgerblue;
+}
+.lrnmore:hover{
+  margin-top:5px;
+}
+.libtn1{
+  border:none;
+  padding:3px;
+  margin:2px;
+  background-color:dodgerblue;
+  text-transform: capitalize;
+  border-radius: 10px;
+  color:white;
+}
+    a{
+      text-decoration: none;
+    } 
+    a:hover{
+      color:dodgerblue;
+    }
+     
+      
+      .logo{
+        display: flex;
+        padding:5px;
+        margin:5px;
+      }
+      .logoimg{
+        width:120px;
+        margin-top:-5px;
+        margin-left: -90px;
+        
+      }
+      .homepage{
+       
+    display: flex;
+    
+      }
+      .turnidea{
+        width: 462px;
+    padding: 20px;
+    margin-left: 50px;
+        position: relative;
+      }
+.turnidea1{
+  font-size: 60px;
+  font-weight: 600;
+}
+.homecontent{
+  font-size: 22px;
+  font-weight: 700;
+  color: slategray;
+}
+.getstrt{
+  display: flex;
+}
+.getstart{
+  border:none;
+  padding-right: 60px;
+  border-radius: 10px;
+  padding-left: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  background-color: dodgerblue;
+  color: white;
+  text-transform: capitalize;
+}
+.getstart:hover{
+  margin-top:27px;
+}
+.homelrn{
+  color:dodgerblue;
+  text-transform: capitalize;
+  padding:20px;
+  margin:20px;
+  
+}
+.types{
+  position: absolute;
+  color:dodgerblue;
+  top:80px;
+  left: 197px;
+    font-size: 50px;
+    font-weight: 700;
+    overflow: hidden;
+    padding:20px;
+  height: 40px;
+}
+.types1{
+/* border-bottom: 5px solid sandybrown; */
+  position: relative;
+  top:0;
+ 
+  animation:types 7s steps(3) infinite;
+}
+@keyframes types {
+  100%{
+    top:-200px;
+  }}
+.types1::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  border-left:5px solid dodgerblue;
+  /* border-bottom: 2px solid black; */
+  background-color:white;
+  animation:typew 2s steps(11)  infinite;
+
+}
+@keyframes typew {
+  
+  100%{
+    left:100%;
+  }
+}
+      .swiper {
+        width: 100%;
+        height:600px;
+        position: relative;
+      }
+      .swiper1 {
+        width: 100%;
+        height:500px;
+        position: relative;
+      }
+      .swiper2 {
+        width: 100%;
+        height:500px;
+        position: relative;
+      }
+      
+      .swiper-slide  {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+       z-index: 99999999;
+      }
+      
+      .upto{
+        color: blue;
+        font-weight: 500;
+      }
+      .fashion{
+        text-transform: capitalize;
+font-size: 50px;
+font-weight: 900;
+      }
+      .inst{
+      position: relative;
+      }
+      .inst::after {
+    content: '';
+    position: absolute;
+    top: 59px;
+    left: 0;
+    z-index: -1;
+    height: 12px;
+    width: 275px;
+    background: repeating-radial-gradient(white -80%, orangered);
+    background-size: 63px;
+    border-radius: 50%;
+}
+      #btn{
+        border-radius: 50px;
+       
+        border:none;
+        outline: none;
+        padding:20px;
+        margin:10px;
+        color:black;
+        background-color: orangered;
+        transform: scale(1);
+        font-size: 25px;
+        animation: btn22 5s linear ;
+        animation-iteration-count: 3;
+        transition: 0.5s;
+      }
+      /* @keyframes btn22 {
+0%{
+  transform: scale(0.3);
+}
+100%{
+  transform: scale(0.7);
+}} */
+      #btn:hover{
+        transform: scale(1.2);
+        transition: 0.5s;
+        color: white;
+        background-color:orangered;
+        box-shadow: 0px 1px 17px 4px orangered;
+      }
+.man{
+  background: linear-gradient(to right,aqua -110%,white 55%,red 212%);
+    background-size: 100%;
+    box-shadow: 10px 10px 50px -7px skyblue;
+}
+
+.woman{
+  background: linear-gradient(to right,aqua -110%,white 55%,red 212%);
+    background-size: 100%;
+  box-shadow: 10px 10px 50px -7px aqua;
+}
+.icon5{
+  z-index:99999999999;
+  position: absolute;}
+.icon1,.icon2,.icon3,.icon4{
+  z-index:99999999999;
+  position: absolute;
+  animation-name: icon;
+  animation-duration: 5s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+}
+@keyframes icon {
+  0%{
+    transform: scale(0.4);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
+.icon1{
+  top:229px;
+  right:240px;
+}
+.icon2{
+  bottom:148px;
+  right:12px;
+}
+.icon3{
+  bottom:34px;
+  left:634px;
+}
+.icon4{
+  top:160px;
+  right: 68px;
+}
+.icon5{
+  top:140px;
+  right:-104px;
+}
+
+.shoes2{
+  background-color:pink;
+}
+
+      .swiper-slide{
+       
+        text-align: center;
+        font-size: 18px;
+        
+overflow: hidden;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+.man1{
+  height: 200px;
+    transform: translateX(-228px);
+    width: 450px;
+    text-align: left;
+    position: relative;
+}
+.shape1{
+  position: absolute;
+  top:-65px;
+  left: -45px;
+}
+       .img1 {
+        display: block;
+    width: 37%;
+    height: 85%;
+    object-fit: cover;
+    position: absolute;
+    top: 85px;
+    right: 94px;
+    z-index: 9999999;
+}
+        
+     
+      .img2 {
+        display: block;
+        width:50%;
+        height:90%;
+        
+        object-fit: cover;
+        position: absolute;
+        top:90px;
+        right:94px;
+        z-index:9999999;
+      }
+       .img4 {
+        display: block;
+        width:50%;
+        height: 100%;
+        
+        object-fit: cover;
+        position: absolute;
+        top:5px;
+        right:94px;
+        z-index:9999999;
+      }
+      .swipper-slide:hover.img1 , .swipper-slide:hover .img2, .swipper-slide:hover.img3,.swipper-slide:hover.img4{
+transform: scale(1.5);
+      }
+      .img3 {
+        display: block;
+        width:70%;
+        height: 100%;
+        
+        object-fit: cover;
+        position: absolute;
+        top:5px;
+        right:94px;
+        z-index:9999999;
+      }
+      .img6 {
+       
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    width:40%;
+    height: 100%;
+    z-index: 999999;
+    object-fit: cover;
+}
+      
+      .circle1,.circle2,.circle3,.circle4{
+       
+        width: 450px;
+        height: 450px;
+        margin:10px;
+        box-shadow: 10px 10px 7px -7px black,-10px -10px 7px -7px black;
+        border-radius: 50%;
+        position:absolute;
+        top:96px;
+        
+      }
+      .circle1{
+        padding:30px;
+        right:80px;
+        background-color:skyblue;
+      }
+      .circle2{
+        padding:30px;
+        right:34px;
+        background-color: aqua;
+      }
+      .circle3{
+        padding:30px;
+        right:40px;
+      }
+      .circle4{
+        padding:30px;
+        right:40px;
+      }
+      .child{
+      display: flex;
+      padding:30px;
+    
+      }
+      .crsctr,.crsctr1{
+
+        text-transform: capitalize;
+        text-align: center;
+      }
+      .crsctr{
+        color:deepskyblue;
+      }
+      .crsctr1{
+      
+        font-size: 40px;
+        font-weight: 900;
+      }
+      .coursecategory{
+        padding: 20px;
+        margin: 20px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+        column-gap: 200px;
+        row-gap: 20px;
+        
+      }
+      .datascience{
+        border:1px solid black;
+        text-transform: capitalize;
+        position: relative;
+        background-color:white;
+        width: 300px;
+        height: 100px;
+        padding:10px;
+        margin:5px;
+      }
+      .datascience:hover{
+        background-color:orangered;
+        color: white;
+      }
+      .datascience:hover .learning{
+        
+       background-color: white;
+      }
+      .learn{
+        font-weight: 900;
+        font-size: 15px;
+      }
+      .learn,.learn1{
+        position: absolute;
+        top:40px;
+        right:70px;
+        line-height: 30px;
+      }
+      /* aboutus.................... */
+      .aboutus{
+        
+        padding:20px;
+        margin:10px;
+        background-color:aliceblue;
+        display: flex;
+      }
+      .trusted{
+        font-size: 15px;
+        color:slategray
+      }
+      .iconfinderimg{
+        width: 70px;
+        padding:10px;
+        margin:5px;
+      }
+      .aboutimg1{
+width: 600px;
+padding:20px;
+margin:20px;
+      }
+      
+      .aboutimg2{
+        width: 400px;
+      }
+.p2{
+  font-size: 30px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+.p3{
+  font-size: 15px;
+  font-weight: 800;
+}
+    .p4{
+      text-transform: capitalize;
+    }  
+      .about{
+        color:dodgerblue;
+        text-transform: capitalize;
+        font-size: 20px;
+      }
+      .content{
+        padding:20px;
+        margin:10px;
+        width: 500px;
+      }
+.bestedt{
+  font-size: 30px;
+  font-weight: 900;
+  text-transform:capitalize;
+}
+ /* numberpercentage.................... */
+ .numpercentage{
+  display: flex;
+  background-color:antiquewhite;
+  padding:30px;
+  margin:30px;
+ }
+ .number1{
+  width: 50%;
+ }
+ .number2{
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+ }
+ .bi-arrow-down-short{
+color:red;
+ }
+ .bi-arrow-up-short{
+  color:lawngreen;
+ }
+ .alphnum{
+  font-size: 15px;
+  color:slategray;
+  text-align: center;
+ }
+      
+      /* products.................. */
+
+      .exclusive{
+padding-top:40px;
+margin-top:40px;
+        background-color:rgba(0,0,0,0.4);
+        color:white;
+        width:100%;
+      }
+      .prodnavbar{
+        padding-top: 21px;
+    display: flex;
+    padding-left: 70px;
+    
+    margin-left: 70px;
+
+      }
+      .showall,.boys,.girlswoman,.shoesbg{
+        box-shadow: -7px 1px 1px 1px cyan;
+        font-size: 15px;
+        z-index:99;
+    font-weight: 900;
+    text-transform: capitalize;
+    border: 1px solid aqua;
+    border-radius:50px;
+    padding: 9px;
+    margin: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+      }
+     
+      :is(.showall,.boys,.girlswoman,.shoesbg):hover{
+background-color: aqua;
+box-shadow: 1px 1px 17px 5px cyan;
+color: white;
+      }
+
+@keyframes girlswoman {
+  0%{
+    transform: scale(0.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
+@keyframes shoesbm {
+  0%{
+    transform: scale(0.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
+}
+      .h1 , .p{
+        padding:15px;
+        font-weight: 900;
+        margin:5px;
+        text-align: center;
+      }
+      .eproducts{
+display:grid;
+grid-template-columns: 200px 200px 200px 200px;
+
+column-gap:97px;
+row-gap: 80px;
+padding:80px;
+margin:10px;
+      }
+      
+      .first{
+        /* padding:10px; */
+        /* margin:5px; */
+        background-color:azure;
+        border-radius: 10px;
+       width:250px;
+       height: 500px;
+      
+      }
+      
+.img11,.img12,.img13,.img14,.img15,.img16,.img17,.img18,.img19,.img20,.img21,.img22{
+width:100%;
+height: 350px;
+object-fit: cover;
+}
+.productsprt{
+  position: relative;
+  transition: 0.5s;
+}
+.productsprt:hover .shop{
+transform: scale(1);
+transition: 0.5s;
+}
+.shop{
+  transition: 0.5s;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+display:flex;
+transform: scale(0);
+  background-color:rgba(0,0,0,0.8);
+}
+.search,.heart,.eye,.cart{
+  
+  padding-top:70px;
+  margin-top:70px;
+}
+.bi-search-heart
+,.bi-basket2-fill,.bi-eye-fill,.bi-balloon-heart-fill{
+  background-color:orangered;
+  color:white;
+  padding:10px;
+  margin:10px;
+}
+:is(.bi-search-heart
+,.bi-basket2-fill,.bi-eye-fill,.bi-balloon-heart-fill):hover{
+  background-color: black;
+}
+.productname,.p1{
+  font-size: 15px;
+  /* font-weight: 900; */
+  padding:5px;
+  margin:5px;
+  text-transform: capitalize;
+  color:slategray;
+}
+.productname:hover{
+  color:orangered;
+}
+.doller,.doller1,.strong{
+  padding:2px;
+  margin:2px;
+}
+.doller1 ,.strong{
+  font-size: 15px;
+  font-weight: 500;
+}
+.doller1{
+  color:red;
+}
+.doller{
+  font-size: 20px;
+  font-weight: 900;
+}
+.star{
+  padding:5px;
+  margin:5px;
+}
+/* .featured................................. */
+
+.featured{
+  padding-top:40px;
+margin-top:40px;
+background-color: rgba(0,0,0,0.4);
+color:white;
+        width:100%;
+}
+.eventimg{
+  height: 600px;
+  width: 500px;
+  object-fit: cover;
+}
+.eventimgbtn{
+  z-index:1;
+  position: absolute;
+  bottom:40px;
+  left:409px;
+  width: 200px;
+  border:none;
+  padding:20px;
+  margin:10px;
+  font-weight: 900;
+  background-color:orangered;
+  text-transform: capitalize;
+  color:white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.eventimgbtn:hover{
+transform: scale(1.1);
+}
+.bi-collection-play-fill{
+  background-color: white;
+  border-radius: 20px;
+}
+.date{
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  padding:30px;
+  margin:10px;
+}
+.date:hover{
+  border-right:3px solid orangered;
+}
+.date1{
+  background-color: white;
+  width: 100px;
+}
+.date2{
+  color: dodgerblue;
+  font-size: 30px;
+  font-weight: 900;
+}
+.date3{
+  font-weight: 900;
+  color:dodgerblue;
+}
+.datetime,.workshop{
+  position: absolute;
+}
+.datetime{
+  top:30px;
+  left:100px;
+}
+.workshop{
+  top:50px;
+  left:100px;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.workshop:hover{
+  color: orangered;
+}
+.eproducts1{
+ display: inline-flex;
+    position: relative;
+    padding-left: 290px;
+    padding-bottom: 80px;
+    margin-left: 290px;
+    margin-top: 90px;
+}
+
+.gola{
+  display: flex;
+  padding:5px;
+  margin:5px;
+  position: absolute;
+  bottom: 12px;
+  left: 290px;
+}
+.cir,.cir1{
+  background-color:white;
+  box-shadow: 0px 1px 8px 2px cyan, 0px -1px 8px 2px orchid;
+  border-top: 2px solid aqua;
+    border-bottom: 2px solid orchid;
+  height: 5px;
+  width: 5px;
+  
+  border-radius: 50%;
+  padding:5px;
+  margin:5px;
+
+}
+.prenext{
+  position: absolute;
+    bottom: 0px;
+    left: 386px;
+    z-index: 9999999999;
+}
+.bi-chevron-left ,.bi-chevron-right{
+  color:white;
+}
+.pre{
+  border-radius: 21%;
+  padding: 5px;
+    margin: 5px;
+  background-color:orangered;
+  color: white;
+}
+
+.next{
+  border-radius: 21%;
+  padding: 5px;
+    margin: 5px;
+  background-color: orangered;
+  color: white;
+}
+:is(.pre,.next):hover{
+  background-color: black;
+}
+ .featuredprt{
+  position: relative;
+}
+.featuredprt:hover .shop1{
+left:0;
+opacity: 0.9;
+  transition: 0.5s;
+}
+.shop1{
+  transition: 0.5s;
+  position:absolute;
+  top:0;
+  left:77px;
+  opacity: 0;
+  width:100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.4);
+  
+} 
+.search1,.eye1,.cart1,.heart1{
+  padding-top: 30px;
+    margin-top: 15px;
+    margin-left: 193px;
+}
+
+/* .review................................ */
+
+.review{
+  padding-top:40px;
+margin-top:40px;
+  background-color: rgba(0,0,0,0.4);
+  color:white;
+        width:100%;
+      }
+      .aboutuscore{
+        display: flex;
+        background-color:navy;
+      }
+      .corefeatureimg{
+        height: 650px;
+      }
+      .featuriconimg{
+        padding:10px;
+        margin:10px;
+        background-color: dodgerblue;
+      }
+      .featuriconimg1{
+        padding:10px;
+        margin:10px;
+        background-color: orchid;
+      }
+      .featuriconimg2{
+        padding:10px;
+        margin:10px;
+        background-color:rebeccapurple;
+      }
+      .stdlife,.stdlife1{
+        text-transform: capitalize;
+        position: absolute;
+      }
+      .stdlife{
+        font-size:25px;
+        font-weight: 900;
+        top:30px;
+        left:100px;
+      }
+      .stdlife1{
+        top:65px;
+        left:100px;
+      }
+      .slide{
+        padding:20px;
+        margin:20px;
+        display:grid;
+        grid-template-columns: 200px 200px;
+        column-gap: 450px;
+        row-gap: 20px;
+      }
+      .slide1{
+        background-color: white;
+        padding:40px;
+        margin:40px;
+        width:400px;
+       
+        box-shadow: 10px 10px 7px -7px orchid, -10px -10px 7px -7px cyan;
+position: relative;      }
+
+      .content{
+        padding-top: 20px;
+    padding-bottom: 82px;
+    margin: 20px
+      }
+.smallpic{
+  width:70px;
+  height: 70px;
+  position: absolute;
+    top: 118px;
+    left: 146px;
+    object-fit: cover;
+  
+}
+.fname{
+  position: absolute;
+    top: 100px;
+    right: 80px;
+    text-transform: capitalize;
+    font-weight:800;
+    padding:10px;
+    margin:10px;
+}
+.fname2{
+  color: orangered;
+}
+
+/* .contactus.......................... */
+
+.contactus{
+  padding-top:40px;
+margin-top:40px;
+  background-color: rgba(0,0,0,0.4);
+  color:white;
+        width:100%;
+      }
+      .contactprt{
+        padding:40px;
+        margin:40px;
+        display:grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        column-gap:100px;
+      }
+      .bstcoach{
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        color:deepskyblue;
+        text-transform: capitalize;
+      }
+      .ourexpert{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+      .coach{
+position: relative;
+        padding:20px;
+        margin:20px;
+        background-color: lavender;
+        width: 200px;
+        height: 300px;
+      }
+      .iconfwt{
+        position: absolute;
+        bottom:40px;
+        opacity: 0;
+        left:50px;
+      }
+      .coach:hover .iconfwt{
+        bottom:74px;
+        opacity: 0.9;
+      }
+      .bi-facebook,.bi-google,.bi-github,.bi-twitter{
+        font-size: 15px;
+        border-radius: 5px;
+        background-color:white;
+        color:slategray;
+        padding:5px;
+        margin:5px;
+      }
+      :is(.bi-facebook,.bi-google,.bi-twitter,.bi-github):hover{
+        background-color:slategray;
+        color:white;
+      }
+      .coachimg{
+        width: 100%;
+        height: 250px;
+      }
+      .coachname,.coachname1{
+        text-align: center;
+        line-height: 30px;
+      }
+      .coachname{
+      font-size: 20px;
+      font-weight: 900;
+      }
+      .coachname1{
+        color:deepskyblue;
+      }
+      
+      
+/* blog............... */
+
+.blog{
+  padding-top:40px;
+margin-top:40px;
+  background-color: rgba(0,0,0,0.4);
+  color:white;
+        width:100%;
+      }
+      
+      .develop{
+        margin-left: 400px;
+      
+        width: 600px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+      .async{
+        font-size: 15px;
+        text-align: center;
+        color:slategray;
+        text-transform: capitalize;
+      }
+      .bi-check-lg{
+        color:dodgerblue;
+      }
+      .eproducts3{
+        display:grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 216px;
+        row-gap: 10px;
+  padding:15px;
+  margin:20px;
+      }
+
+      .dismore{
+        font-size: 30px;
+        font-weight: 900;
+        color:slategray;
+        text-transform: capitalize;
+        text-align: center;
+      }
+      .blogpic{
+        width:360px;
+        /* height: 400px; */
+        position: relative;
+      overflow: hidden;
+      }
+      .marketingbtn,.businessbtn{
+        padding:10px;
+        margin:5px;
+        border:none;
+        outline: none;
+       text-transform: capitalize;
+        color:white;
+        position: absolute;
+        top:200px;
+        z-index:1;
+      }
+      .marketingbtn{
+        background-color: orangered;
+        left:12px;
+      }
+      .businessbtn{
+        background-color:dodgerblue;
+        right:12px;
+      }
+      .imgb{
+        height: 245px;
+        width:100%;
+        /* object-fit:cover; */
+      
+      }
+      .frontapp{
+        font-size: 20px;
+        text-transform: capitalize;
+        font-size: 700;
+        padding:5px;
+      }
+      .frontapp1{
+        padding:5px;
+        font-size: 15px;
+        color:slategray;
+      }
+.frontapp2{
+  padding:10px;
+  color:slategray;
+}
+      .btnblog{
+        box-shadow: -12px 0px 1px 1px orangered, 6px 3px 1px 1px orangered;
+        padding: 14px;
+        background-color: white;
+    margin: 10px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 10%;
+    font-size: 15px;
+    font-weight: bold;
+
+      }
+      .btnblog:hover{
+       color:white;
+       background-color: orangered;
+       box-shadow: 1px 1px 25px 5px orangered;
+      }
+      .bloguserdate{
+        position:absolute;
+        bottom: 50px;
+      }
+      .readblg{
+        font-size: 15px;
+        color:slategray;
+        text-transform: capitalize;
+        /* line-height: 10px; */
+        padding:5px;
+      }
+      .rdblg{
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: capitalize;
+       padding:5px;
+       
+      }
+      .gohere{
+        
+        border-radius: 30px;
+        border:1px solid slategray;
+        padding:15px;
+        margin:5px;
+        width: 220px;
+        color:slategray;
+        text-transform: capitalize;
+        margin-top: -5px;
+        margin-left: 500px;
+      }
+      .go{
+        font-weight: 700;
+        color:dodgerblue;
+      }
+      .month{
+        font-size: 15px;
+text-transform: capitalize;
+      }
+      .bloguser{
+        font-size: 15px;
+    /* right: 40px; */
+    position: absolute;
+    left: 322px;
+    text-transform: capitalize;
+      }
+      .blogdels{
+        background-color:navy;
+        color: white;
+      }
+      .startcourses{
+        position: relative;
+        padding:40px;
+        margin:10px;
+        background-color: blue;
+        color: white;
+        display: grid;
+        grid-template-columns: 200px 200px;
+        column-gap:700px;
+      }
+      .waveimg{
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+      .startcontent{
+        width: 400px;
+        z-index:999999;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: capitalize;
+      }
+      .details{
+        display: flex;
+       /* flex-direction: row; */
+        width:100%;
+        padding-right:20px;
+        padding-left:10px;
+       
+        margin:50px;
+      }
+      .about1,.category1,.quick1,.useful1{
+      display: block;
+        padding:35px;
+        margin:10px;
+      }
+      .about{
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: capitalize;
+        color:dodgerblue;
+      }
+      .frontpngimg{
+        width: 120px;
+      }
+      .category,.useful,.quick{
+        
+margin-bottom: 12px;
+        font-size:15px;
+        text-transform: capitalize;
+        color:rgba(0,0,0,0.6);
+        font-weight: 900;
+      }
+      .lists{
+        display: block;
+        color:slategray;
+        text-transform: capitalize;
+        font-weight:200;
+      }
+      .lists a{
+        color:slategray;
+      }
+      .lists a:hover{
+        color:dodgerblue;
+       
+      }
+      .lists:hover{
+      
+        color:dodgerblue;
+      }
+      .hiring{
+        border:none;
+        border-radius:10px;
+        padding: 5px;
+        background-color:sandybrown;
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+      .bi-geo-alt-fill,.bi-telephone-inbound-fill,.bi-arrow-up-right-square,.bi-question-circle-fill,.bi-person-circle{
+        color:lightslategray;
+        font-size: 14px;
+        padding:5px;
+      }
+      .hrline{
+      border:1px solid rgba(0,0,0,0.1);
+      margin-left:90px;
+      margin-right:90px;
+      }
+      .privacy{
+        margin-top: 10px;
+        margin-left: 82px;
+        display:flex;
+        justify-content: flex-start;
+      }
+      .privacy1,.privacy3{
+        font-size: 15px;
+        text-transform: capitalize;
+        color:slategray;
+      }
+      
+      .privacy2{
+        margin-top:-10px;
+        margin-right: 160px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .select1{
+        position: relative;
+      }
+      #opt1{
+       
+        display: none;
+        z-index:99;
+      }
+      .opt1{
+        padding:5px;
+        margin:5px;
+        margin-top:-5px;
+        background-color:lavender;
+        border-radius: 10px;
+        width: 120px;
+        color: slategray;
+        text-transform: capitalize;
+      }
+      .opt1:hover{
+        background-color:slategray;
+        color:white;
+      }
+      .opt2{
+        position: absolute;
+        top:28px;
+        left:5px;
+        /* display:block; */
+        width: 120px;
+        padding:5px;
+        margin:5px;
+        background-color: lavender;
+        color: slategray;
+        text-transform: capitalize;
+
+      }
+      .opt3{
+        padding:5px;
+        margin:5px;
+        border-radius: 10px;
+      }
+      .opt3:hover{
+        background-color: slategray;
+        color:white;
+      }
+      .opticon{
+        width: 20px;
+      }
+      
+      .arrow{
+        padding:5px;
+        margin:5px;
+        font-size: 20px;
+        font-weight: 900;
+        color:orangered;
+      }
+      .icons{
+        margin-left:538px;
+    margin-right: 234px;
+    padding:5px;
+    margin-bottom:5px;
+      }
+      .fb{
+        background-color: black;
+        
+        border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+   
+      }
+      
+      
+      .footer{
+        margin-bottom: 50px;
+        
+      }
+      .footer1{
+       text-align: center;
+       font-size: 15px;
+       text-transform: capitalize;
+       color: slategray;
+       display: block;
+       padding:5px;
+      }
+      
+    .webdesigner{
+      color:orangered;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+    #bottomscroll{
+      position: fixed;
+      z-index:999999;
+      right:40px;
+      bottom:40px;
+      display:block;
+    }
+    .bi-chevron-up{
+border-radius:50px;
+padding:10px;
+margin:10px;
+color:black;
+background-color:lavender;
+    }
+    .bi-chevron-up:hover{
+      color:white;
+      background-color:dodgerblue;
+    }
+
+    /* mediaquery.................. */
+    @media  screen and (max-width:1024px) and (min-width:1000px) {
+      .left{
+        left: 54px;
+      }
+      .right{
+        right:54px;
+      }
+.circle1{
+  right:0px;
+}
+.img2{
+  width: 70%;
+  right:72px;
+}
+.child{
+  padding:0px;
+}
+.eproducts{
+  grid-template-columns: 200px 200px 200px;
+}
+.img6{
+  width: 45%;
+}
+.gola{
+  left: 78px;
+}
+.prenext{
+  left: 165px;
+}
+.eproducts1{
+  padding-left: 88px;
+}
+.slide{
+  margin-left: -26px;
+  column-gap: 303px;
+  padding:0;
+}
+.contactprt{
+  
+  column-gap: 100px;
+}
+.address, .number, .email {
+   
+    padding: 10px;
+    margin: 10px;
+    
+    width: 236px;
+    height: 152px;
+}
+.mapcenter {
+   
+    column-gap: 315px;
+}
+.prtprogress {
+    
+    width: 409px; 
+}
+iframe{
+  width: 380px;
+    height: 356px;
+    border-radius: 6%;
+}
+
+.eproducts3 {
+    
+    grid-template-columns: 200px 200px;
+    column-gap: 216px;
+    row-gap: 15px;
+    padding: 50px;
+    margin: 40px;
+}
+.details {
+   
+    padding-left: 20px;
+    margin: 60px;
+}
+.icons {
+  margin-left: 400px;
+    margin-bottom: 20px;
+}
+.fb, .footer {
+    transform: translate(417px ,0px);
+}
+.coursecategory{
+  column-gap: 120px;
+}
+.datascience{
+  width: 275px;
+}
+.startcourses{
+  column-gap: 500px;
+}
+.aboutimg3{
+  bottom:300px;
+}
+.logoimg{
+  width:100px;
+}
+.corefeatureimg{
+  object-fit: cover;
+  width: 500px;
+    }
+  }
+
+@media screen and (max-width:950px) and (min-width:850px) {
+      .left {
+    left: 35px;
+}
+.right {
+    right: 8px;
+}
+.circle1 {
+   
+    right: -7px;
+}
+.man1 {
+    transform: translateX(-198px);
+   
+}
+
+.img2 {
+  
+    width: 70%;
+}
+.below1, .below2 {
+    
+   
+    padding: 120px;
+    margin: 24px;
+   
+}
+.img5 {
+    width: 125%;
+}
+
+.eproducts {
+grid-template-columns: 200px 200px 200px;
+    column-gap: 97px;
+    row-gap: 80px;
+    padding: 12px;
+    margin: 10px;
+}
+.eproducts1 {
+   
+    padding-left:40px;
+    margin-bottom: -29px;
+    padding-bottom: 200px;
+}
+.gola{
+left:36px;
+bottom: 144px;
+}
+
+.prenext {
+   
+    bottom: 95px;
+    left: 135px;
+   
+}
+.slide {
+  padding-left: 1px;
+    margin-left: -28px;
+    padding: -48px;
+    padding-top: 50px;
+    /* margin: -25px; */
+    margin-top: 50px;
+    
+    grid-template-columns: 100px 100px;
+    column-gap: 355px;
+    
+}
+
+.slide1{
+  width: 345px;
+}
+.contactprt {
+      padding-top: 80px;
+    margin: -3px;
+    column-gap: 81px;
+}
+.address, .number, .email {
+   
+    padding-top: 28px;
+    margin: 10px;
+    
+    width: 215px;
+    height: 156px;
+}
+.mapcenter {
+   
+    column-gap: 300px;}
+
+.prtprogress {
+    width: 400px; 
+}
+iframe{
+    width: 337px;
+    height: 310px;
+    border-radius: 5%;
+}
+.eproducts3 {
+    
+    grid-template-columns: 200px 200px;
+}
+.details {
+   padding-left: 0px;
+    margin: 0px;
+}
+.icons {
+    margin-left: 308px;
+   
+    padding: 5px;
+    margin-bottom: 5px;
+    }
+    .fb, .footer {
+    transform: translate(330px ,0px);
+}
+.logoimg{
+  width: 95px;
+}
+.man1{
+  z-index:99;
+}
+.coursecategory{
+  height: 700px;
+  padding:40px;
+  grid-template-columns: 200px 200px;
+  column-gap: 200px;;
+}
+.startcourses{
+column-gap: 300px;;
+}
+.aboutus{
+  flex-direction: column;
+}
+.aboutuscore{
+  flex-direction: column;
+}
+    }
+
+    @media screen and (max-width:850px) and (min-width:600px) {
+
+      .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8 {
+    padding: 7px;  
+}
+.logoimg{
+  width: 80px;
+}
+.man1{
+  z-index:99;
+}
+.coursecategory{
+  column-gap: 150px;
+  grid-template-columns: 200px 200px;
+  height: 600px;
+}
+.startcourses{
+  column-gap: 280px;
+}
+.aboutus{
+  flex-direction: column;
+}
+.aboutuscore{
+  flex-direction: column;
+}
+.fb,.footer{
+transform: translate(522px ,0px);
+      }
+      .icons{
+        margin-left: 500px;
+      }
+.left{
+  left:5px;
+}
+.right{
+  right:12px;
+}
+.man1 {
+    transform: translateX(-140px);
+}
+.img1 {
+    width: 49%;
+    right: -8px;
+    z-index: 9999999;
+}
+.circle1 {
+    right: -78px;
+}
+.img2 {
+    width: 79%;
+    height: 81%;
+    top: 100px;
+    right: 12px;  
+}
+.circle2 {
+    right: -82px;
+}
+.img3 {
+    width: 88%;
+    top: 5px;
+    right: 48px;
+}
+.img4 {
+     width: 70%;
+    height: 100%;
+    top: 5px;
+    right: -40px;
+}
+.circle4 {
+    padding: 30px;
+    right: -9px;
+}
+.img5 {
+   top: -7px;
+   left: -122px;
+   width: 100%;
+   height: 100%;
+}
+.eproducts {
+    grid-template-columns: 200px 200px 200px;
+    column-gap:43px;
+    padding: 11px;
+}
+.first {
+    width: 200px;
+    height: 525px;
+}
+.img6 {
+    left: -5px;}
+    .onlycontent1 {
+    transform: translateX(-131px);}
+
+    .upto2, .fashion2 {
+    text-transform: capitalize;
+}
+.gola {
+    left: 55px;
+}
+.prenext {
+    left: 138px;
+}
+.eproducts1 {
+    padding-left: 0px;
+    margin-left: 200px;
+    }
+    .featuredclassimg{
+      width:400px;
+    }
+    .slide {
+   
+    grid-template-columns: 200px 200px;
+    column-gap: 150px;
+    row-gap: 20px;
+  }
+  .slide1 {
+    padding: 0px;
+    width: 300px;
+    height: 206px;
+  }
+  .fname {
+    left: 20px;
+  }
+  .contactprt {
+    padding: 0px;
+    margin: 40px;
+    column-gap:25px;
+}
+.address, .number, .email {
+   
+    padding-top: 34px;
+    width: 200px;
+    height: 150px;
+}
+.mapcenter {
+    
+    grid-template-columns: 200px;
+    column-gap: 200px;
+}
+.eproducts3 {
+   
+    grid-template-columns: 200px 200px;
+    column-gap:150px;
+    row-gap: 10px;
+    padding: 15px;
+    margin: 20px;
+}
+.blogpic{
+  width: 300px;
+  height: 499px;
+}
+.bloguser {
+    left: 265px;
+}
+
+.details {
+  padding-left: 0px;
+    margin: 14px;
+}
+.icons {
+    margin-left: 235px;
+}
+.fb, .footer {
+    transform: translate(260px,0px);
+}
+.about1, .category1, .quick1, .useful1 {
+    padding: 10px;
+    margin: 20px;
+}
+}
+
+    @media screen and (max-width:450px)and (min-width:220px) {
+      .swiper{
+        height: 950px;
+      }
+      
+
+      #head{
+        display:block;
+      }
+      #listbar,#remover{
+        display: block;
+      }
+      .bi-list{
+        color:black;
+        padding:10px;
+        margin:10px;
+      }
+      .bi-list:hover{
+        color:orangered;
+      }
+      #verticalhead {
+    position: absolute;
+    text-align: center;
+    top: 36px;
+    left: -1000px;
+    transition: 0.5s;
+    width: 100%;
+    margin-left:0px;
+    padding-top: 20px;
+    z-index: 99999999;
+    background-color: white;
+    padding-bottom: 20px;
+}  
+
+.left1{
+ 
+    float: right;
+    padding: -6px;
+    
+    padding-top: -5px;
+    margin-top: -13px;
+}
+  
+
+.bi-shield-fill-x:hover{
+  color: black;
+}
+
+
+
+
+
+
+
+
+  body::-webkit-scrollbar{
+    display: none;
+  }
+      .man1 {
+        z-index:99;
+    transform: translate(0px,135px);
+    width: 260px;
+  
+}
+.icon1{
+top: 251px;
+    left: 57px;
+    width: 150px;
+}
+.icon2{
+  width: 150px;
+    top: 302px;
+    right: 35px;
+}
+.icon3{
+  top: 348px;
+    left: 41px;
+    width: 150px;
+}
+.img1 {
+    
+  width: 50%;
+    height: 37%;
+    top: 79px;
+    right: 108px;
+}
+.circle1, .circle2, .circle3, .circle4 {
+  top: 146px;
+    width: 251px;
+    height: 270px;
+    left: 33px
+}
+
+.img2 {
+  width: 95%;
+    height: 31%;
+    top: 67px;
+    right: 99px;
+}
+
+.img3 {
+    width: 87%;
+    height: 32%;
+   
+    top: 5px;
+    right: 94px;
+}
+.img4 {
+    display: block;
+    width: 50%;
+    height: 34%;
+    top: 23px;
+}
+.coursecategory {
+    height: 900px;
+    grid-template-columns: 0px;
+    grid-template-rows: 110px;
+    row-gap: -33px;
+}
+.aboutus{
+  display:flex;
+  flex-direction: column;
+}
+.aboutimg1{
+  top: -21px;
+    left: -184px;
+}
+.aboutimg2{
+  top: 158px;
+    left: 55px;
+    width: 200px;
+}
+.aboutimg3{
+  width: 200px;
+    bottom: 52px;
+    right: 20px;
+}
+.content{
+  width: 356px;
+}
+.eventimgbtn{
+  left: 82px;
+}
+.aboutuscore{
+  flex-direction: column;
+}
+.startcourses{
+  margin:0;
+  grid-template-columns: 200px;
+}
+.onlycontent {
+    transform: translateX(-104px);
+}
+.child{
+  flex-direction: column;
+}
+.img5 {
+  
+    top: 89px;
+    left: -165px;
+    width: 76%;
+    height: 75%;
+}
+.fashion{
+  font-size: 20px;
+}
+.fashion1{
+  font-size: 20px;
+}
+.logoimg {
+    width: 52px;}
+
+.logop{
+  font-size: 10px;
+}
+.prodnavbar {
+   
+    padding-left:5px;
+    margin-left: 3px;
+}
+.showall, .boys, .girlswoman, .shoesbg {
+    font-size: 5px;}
+
+.eproducts {
+   
+    grid-template-columns: 200px;
+    column-gap: 97px;
+    row-gap: 24px;
+    padding: 24px;
+    margin: 35px;
+}
+.onlycontent1 {
+    transform: translateX(-134px);
+}
+.fashion2 {
+    font-size: 10px;
+    font-weight: 900;
+}
+.img6 {
+   
+    top: 160px;
+    left: -17px;
+    width: 40%;
+    height: 52%;
+   }
+   .eproducts1 {
+    padding-left: 0px;
+    padding-bottom:126px;
+    margin-left: 45px;
+}
+.gola {
+    bottom: 65px;
+    left: 6px;
+}
+.prenext {
+    bottom: 34px;
+    left: 92px;
+}
+.slide {
+    padding: 3px;
+    margin: 5px;
+   
+    grid-template-columns: 200px;
+    column-gap: 450px;
+    row-gap: 4px;
+}
+.slide1 {
+    padding: 8px;
+    width: 250px}
+
+.contactprt {
+    padding: 30px;
+    margin: 30px;
+    grid-template-columns: 200px; 
+}
+.address, .number, .email {
+    width: 200px;
+    height: 133px;
+}
+.mapcenter {
+    grid-template-columns: 200px;  
+    margin-left: -34px;
+}
+.prtprogress {
+    background-color: aliceblue;
+    padding: -9px;
+    width: 250px;
+    margin: -7px;
+}
+iframe{
+  width: 300px;
+  height: 300px;
+}
+.eproducts3 {
+
+    grid-template-columns: 200px;
+    
+    padding: -13px;
+    margin:45px;
+}
+.blogpic {
+    width: 261px;
+}
+.bloguser {
+    left: 232px;
+}
+.details {
+   
+    flex-direction: column;
+    padding-left: 13px;
+    margin: 50px;
+}
+.about1, .category1, .quick1, .useful1 {
+    font-size: 19px;}
+    .icons {
+    margin-left: 46px;
+    padding: 5px;
+  margin-right: 0;}
+
+    .fb, .footer {
+    transform: translate(56px ,0px);
+    }
+  
+
+.startcontent{
+ font-size: 25px;
+
+}
+
+}
+
+    @media screen and (max-width:370px)and (min-width:200px) {
+      #home1{
+        display:block;
+      }
+
+      .circle1, .circle2, .circle3, .circle4 {
+    left: 7px;
+}
+.eproducts {
+    padding: 18px;
+    margin: 25px;
+}
+.datascience{
+  width: 280px;
+}
+
+    }
+    </style>
+  </head>
+
+  <body onload="getpagecontent('home')">
+    <!-- Swiper -->
+    <div class="parent" id="parent">
+      <div class="topbar">
+        <div id="topbar1" class="topbar1">
+          <a href="#">demos </a><i class="bi bi-chevron-down"></i>
+        <div class="demosicon">
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.6 5.59998L20.9 10.9C21.3 11.3 21.3 11.9 20.9 12.3L17.6 15.6L11.6 9.59998L15.6 5.59998ZM2.3 12.3L7.59999 17.6L11.6 13.6L5.59999 7.59998L2.3 10.9C1.9 11.3 1.9 11.9 2.3 12.3Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M17.6 15.6L12.3 20.9C11.9 21.3 11.3 21.3 10.9 20.9L7.59998 17.6L13.6 11.6L17.6 15.6ZM10.9 2.3L5.59998 7.6L9.59998 11.6L15.6 5.6L12.3 2.3C11.9 1.9 11.3 1.9 10.9 2.3Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">main</div>
+            <div class="maincontent">Over 60 corporate, agency, portfolio, account and many more pages.</div>
+          </div>
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 3C5.67157 3 5 3.67157 5 4.5V6H3.5C2.67157 6 2 6.67157 2 7.5C2 8.32843 2.67157 9 3.5 9H5V19.5C5 20.3284 5.67157 21 6.5 21C7.32843 21 8 20.3284 8 19.5V9H20.5C21.3284 9 22 8.32843 22 7.5C22 6.67157 21.3284 6 20.5 6H8V4.5C8 3.67157 7.32843 3 6.5 3Z" fill="dodgerblue"></path>
+              <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M20.5 11H10V17.5C10 18.3284 10.6716 19 11.5 19H15.5C17.3546 19 19.0277 18.2233 20.2119 16.9775C20.1436 16.9922 20.0727 17 20 17C19.4477 17 19 16.5523 19 16V13C19 12.4477 19.4477 12 20 12C20.5523 12 21 12.4477 21 13V15.9657C21.6334 14.9626 22 13.7741 22 12.5C22 11.6716 21.3284 11 20.5 11Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">real estate</div>
+            <div class="maincontent">Find the latest homes for sale, real estate market data.</div>
+          </div>
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M20 15H4C2.9 15 2 14.1 2 13V7C2 6.4 2.4 6 3 6H21C21.6 6 22 6.4 22 7V13C22 14.1 21.1 15 20 15ZM13 12H11C10.5 12 10 12.4 10 13V16C10 16.5 10.4 17 11 17H13C13.6 17 14 16.6 14 16V13C14 12.4 13.6 12 13 12Z" fill="dodgerblue"></path>
+              <path d="M14 6V5H10V6H8V5C8 3.9 8.9 3 10 3H14C15.1 3 16 3.9 16 5V6H14ZM20 15H14V16C14 16.6 13.5 17 13 17H11C10.5 17 10 16.6 10 16V15H4C3.6 15 3.3 14.9 3 14.7V18C3 19.1 3.9 20 5 20H19C20.1 20 21 19.1 21 18V14.7C20.7 14.9 20.4 15 20 15Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">jobs <span class="jobsbtn">hot</span></div>
+            <div class="maincontent">Search millions of jobs online to find the next step in your career.</div>
+          </div>
+          
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="dodgerblue"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9167 6.83334H9.91666C9.18899 6.83334 8.66666 7.37744 8.66666 8.08334V13.9167C8.66666 14.6226 9.18899 15.1667 9.91666 15.1667H14.9167C15.1841 15.1667 15.3333 15.0112 15.3333 14.75V14.3333H10.3333C10.1032 14.3333 9.91665 14.1468 9.91665 13.9167C9.91665 13.6866 10.1032 13.5 10.3333 13.5H15.3333V7.25001C15.3333 6.9888 15.1841 6.83334 14.9167 6.83334Z" fill="dodgerblue"></path>
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="10">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9167 6.83334H9.91666C9.18899 6.83334 8.66666 7.37744 8.66666 8.08334V13.9167C8.66666 14.6226 9.18899 15.1667 9.91666 15.1667H14.9167C15.1841 15.1667 15.3333 15.0112 15.3333 14.75V14.3333H10.3333C10.1032 14.3333 9.91665 14.1468 9.91665 13.9167C9.91665 13.6866 10.1032 13.5 10.3333 13.5H15.3333V7.25001C15.3333 6.9888 15.1841 6.83334 14.9167 6.83334Z" fill="white"></path>
+              </mask>
+              <g mask="url(#mask0)">
+              </g>
+            </svg>
+            <div class="main1">course</div>
+            <div class="maincontent">Learn on your schedule. An online learning and teaching demo.</div>
+          </div>
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M20 22H4C3.4 22 3 21.6 3 21V2H21V21C21 21.6 20.6 22 20 22Z" fill="dodgerblue"></path>
+              <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">e-commerce</div>
+            <div class="maincontent">Choose an online store &amp; get your business online today!</div>
+          </div>
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M20 22H4C3.4 22 3 21.6 3 21V2H21V21C21 21.6 20.6 22 20 22Z" fill="dodgerblue"></path>
+              <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">app markateplace</div>
+            <div class="maincontent">Find apps and integrates seamlessly with popular apps.</div>
+          </div>
+          
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M20 22H4C3.4 22 3 21.6 3 21V2H21V21C21 21.6 20.6 22 20 22Z" fill="dodgerblue"></path>
+              <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">help disk</div>
+            <div class="maincontent">A customer service demo that helps you balance customer needs.</div>
+          </div>
+          <div class="main">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.3" d="M18 10V20C18 20.6 18.4 21 19 21C19.6 21 20 20.6 20 20V10H18Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M11 10V17H6V10H4V20C4 20.6 4.4 21 5 21H12C12.6 21 13 20.6 13 20V10H11Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M10 10C10 11.1 9.1 12 8 12C6.9 12 6 11.1 6 10H10Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M18 10C18 11.1 17.1 12 16 12C14.9 12 14 11.1 14 10H18Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M14 4H10V10H14V4Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M17 4H20L22 10H18L17 4Z" fill="dodgerblue"></path>
+              <path opacity="0.3" d="M7 4H4L2 10H6L7 4Z" fill="dodgerblue"></path>
+              <path d="M6 10C6 11.1 5.1 12 4 12C2.9 12 2 11.1 2 10H6ZM10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10H10ZM18 10C18 11.1 18.9 12 20 12C21.1 12 22 11.1 22 10H18ZM19 2H5C4.4 2 4 2.4 4 3V4H20V3C20 2.4 19.6 2 19 2ZM12 17C12 16.4 11.6 16 11 16H6C5.4 16 5 16.4 5 17C5 17.6 5.4 18 6 18H11C11.6 18 12 17.6 12 17Z" fill="dodgerblue"></path>
+            </svg>
+            <div class="main1">new demo ideas?</div>
+            <div class="maincontent">  Send us your suggestions <i class="bi-box-arrow-up-right ms-1"></i></div>
+          </div>
+        </div></div>
+        
+        
+    
+          <div id="topbar1" class="topbar2">
+            <a href="#">docs </a><i class="bi bi-chevron-down"></i>
+            <div class="demosicon1">
+            <div class="main">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.3" d="M20 22H4C3.4 22 3 21.6 3 21V2H21V21C21 21.6 20.6 22 20 22Z" fill="dodgerblue"></path>
+                <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="dodgerblue"></path>
+              </svg>
+              <div class="main1">help disk</div>
+              <div class="maincontent">A customer service demo that helps you balance customer needs.</div>
+            </div>
+            <div class="main">
+              <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.3" d="M18 10V20C18 20.6 18.4 21 19 21C19.6 21 20 20.6 20 20V10H18Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M11 10V17H6V10H4V20C4 20.6 4.4 21 5 21H12C12.6 21 13 20.6 13 20V10H11Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M10 10C10 11.1 9.1 12 8 12C6.9 12 6 11.1 6 10H10Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M18 10C18 11.1 17.1 12 16 12C14.9 12 14 11.1 14 10H18Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M14 4H10V10H14V4Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M17 4H20L22 10H18L17 4Z" fill="dodgerblue"></path>
+                <path opacity="0.3" d="M7 4H4L2 10H6L7 4Z" fill="dodgerblue"></path>
+                <path d="M6 10C6 11.1 5.1 12 4 12C2.9 12 2 11.1 2 10H6ZM10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10H10ZM18 10C18 11.1 18.9 12 20 12C21.1 12 22 11.1 22 10H18ZM19 2H5C4.4 2 4 2.4 4 3V4H20V3C20 2.4 19.6 2 19 2ZM12 17C12 16.4 11.6 16 11 16H6C5.4 16 5 16.4 5 17C5 17.6 5.4 18 6 18H11C11.6 18 12 17.6 12 17Z" fill="dodgerblue"></path>
+              </svg>
+              <div class="main1">new demo ideas?</div>
+              <div class="maincontent">  Send us your suggestions <i class="bi-box-arrow-up-right ms-1"></i></div>
+            </div></div></div></div>
+
+ 
+      <header id="home">
+       
+        <div id="head">
+         
+          <div class="bars" id="listbar"><i class="bi bi-list"></i></div>
+          <div class="left1" id="remover"><i class="bi bi-shield-fill-x"></i></div>
+  
+          <div class="left"><div id="header1" class=" navbarhead1 div1"><img src="front.png" alt="" class="logoimg"></div></div>
+        <div id="header2" class=" navbarhead2 div2">
+          <a href="#" onclick="getpagecontent('home')">landing </a><i class="bi bi-chevron-down"></i>
+          <div class="compannyworks compannyworks1">
+            <div class="landimg">
+              <img src="bookingpage.jpg" alt="boolingimg" class="landingimg">
+             <div class="brand">
+              <div class="brandwrk">branding works</div>
+              <div class="brndcontent">Experience a level of our quality in both design & </div>
+              <div class="brndcontent1">customization works.</div>
+           <button class="lrnmore">learn more ></button>
+             </div>
+            </div>
+            <ul>
+              <li> classic</li>
+              <li> carporate</li>
+              <li>  <span>analytics<button class="libtn1">hot</button></span></li>
+              <li> studio</li>
+              <li> marketing</li>
+              <li> advetisment</li>
+              <li> consulting</li>
+              <li> software</li>
+              <li> business</li>
+              <li> portfolio</li></ul>
+              <ul>
+                <li> classic</li>
+                <li> carporate</li>
+                <li> anlytics</li>
+                <li> studio</li>
+                <li> marketing</li>
+                <li> advetisment</li>
+                <li> consulting</li>
+                <li>  <span>saas<button class="libtn1">hot</button></span></li>
+                <li> business</li>
+                <li> portfolio</li></ul>
+        </div>
+        
+        </div>
+       
+  <div id="header3" class=" navbarhead3 div3">
+          <a href="#">company </a><i class="bi bi-chevron-down"></i>
+        
+         <div class="compannyworks compannyworks2">
+          
+            <ul>
+              <li> classic</li>
+              <li> carporate</li>
+              <li> anlytics</li>
+              <li> studio</li>
+              <li> marketing</li>
+              <li> advetisment</li>
+              <li> consulting</li>
+              <li> software</li>
+              <li> business</li>
+              <li> portfolio</li></ul>
+           </div>
+           </div>
+        
+         
+         
+          <div id="header4" class=" navbarhead4 div4">
+          <a href="#" onclick="click()" class="headallhead">account</a><i class="bi bi-chevron-down"></i>
+        
+        <div class="compannyworks compannyworks3">
+         
+            <ul>
+              <li> classic</li>
+              <li> carporate</li>
+              <li> anlytics</li>
+              <li> studio</li>
+              <li> marketing</li>
+              <li> advetisment</li>
+              <li> consulting</li>
+              <li> software</li>
+              <li> business</li>
+              <li> portfolio</li></ul>
+           </div>
+           </div>
+      
+         
+         
+         
+          <div id="header5" class=" navbarhead5 div5"><a href="#" onclick="click()" class="headallhead">pages</a><i class="bi bi-chevron-down"></i>
+        
+          <div class="compannyworks compannyworks4">
+            
+              <ul>
+                <li> classic</li>
+                <li> carporate</li>
+                <li> anlytics</li>
+                <li> studio</li>
+                <li> marketing</li>
+                <li> advetisment</li>
+                <li> consulting</li>
+                <li> software</li>
+                <li> business</li>
+                <li> portfolio</li></ul>
+             </div>
+             </div>
+          
+
+         <div id="header6" class=" navbarhead6 div6"><a href="#" onclick="click()" class="headallhead">blog</a><i class="bi bi-chevron-down"></i>
+         
+         <div class="compannyworks compannyworks5">
+          
+            <ul>
+              
+              <li> advetisment</li>
+              <li> consulting</li>
+              <li> software</li>
+              <hr>
+              <li> business</li>
+              <li> portfolio</li></ul>
+           </div>
+           </div>
+  
+         <div id="header7" class=" navbarhead7 div6"><a href="#" onclick="getpagecontent('blogs')" onclick="click()" class="headallhead">portfolio</a><i class="bi bi-chevron-down"></i>
+         
+         <div class="compannyworks compannyworks6">
+          
+            <ul>
+              
+              <li> grid</li>
+              <li>product articale</li>
+              <li> case studio:branding</li>
+              <li> case studio:product</li></ul>
+           </div>
+      </div>
+         
+          <div class="header6,#header7"><button class="div7">by now</button></div>
+         
+        </div>
+         </div>     
+  </header>
+
+<!-- <header id="home1" >
+ <div class="head1">
+         
+          <div class="bars" id="listbar"><i class="bi bi-list"></i></div>
+         
+<div class="verticalhead" id="verticalhead">
+  <div class="left1" id="remover"><i class="bi bi-shield-fill-x"></i></div>
+  <div id="header2" class=" navbarhead2 div2">
+    <a href="#home2" onclick="getpagecontent('home')" >landing</a></div>
+   <div id="header3" class=" navbarhead3 div3">
+    <a href="#aboutus" onclick="getpagecontent('aboutus')" onclick="click()" class="headallhead">company</a></div>
+   <div id="header4" class=" navbarhead4 div4">
+    <a href="#products" onclick="getpagecontent('courses')" onclick="click()" class="headallhead">account</a></div>
+   <div id="header5" class=" navbarhead5 div5"><a href="#review" onclick="getpagecontent('features')" onclick="click()" class="headallhead">pages</a></div>
+
+   <div id="header6,#header7" class=" navbarhead6 div6"><a href="#contact" onclick="getpagecontent('coachers')" onclick="click()" class="headallhead">blogs</a></div>
+   <div id="header6,#header7" class=" navbarhead7 div6"><a href="#blog" onclick="getpagecontent('blogs')" onclick="click()" class="headallhead">portfolio</a></div>
+  
+</div>
+
+</header> -->
+<div class="homepage">
+<div class="turnidea">
+  <div class="turnidea1">Turn your ideas into a </div>
+  <div class="types">
+    <div class="types1">success .</div>
+    <div class="types1">startup .</div>
+    <div class="types1"> future .</div>
+  </div>
+  <div class="homecontent">Front's feature-rich designed demo pages help you create the best possible product.</div>
+<div class="getstrt"><div><button class="getstart">get started</button></div>
+<div class="homelrn"> learn more ></div></div>
+</div>
+<img src="https://image.shutterstock.com/image-photo/kid-self-isolation-using-tablet-260nw-1681937335.jpg" alt="" width="600px">
+</div>
+<div class="developsite">
+  <div class="develop">learn to develop site components and desing system</div>
+  <div class="async"><i class="bi bi-check-lg"></i>asyncronous collaboration <i class="bi bi-check-lg"></i>updates and anouncement <i class="bi bi-check-lg"></i>training and team building</div>
+<div class="eproducts3">
+  
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x220/img1.jpg" alt="" class="imgb">
+<div class="frontapp">front app</div>
+<div class="frontapp1">Front App is an easier way to search on Android.</div>
+<div class="frontapp2">>  Advanced Analytics </div>
+<div class="frontapp2">>  Digital Marketing</div>
+<div class="frontapp2">>  Organization</div>
+<hr>
+      <div class="homelrn">learn more ></div></div>
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x220/img2.jpg" alt="vishu" class="imgb">
+
+
+      <div class="frontapp">front app</div>
+<div class="frontapp1">Front Chat is a new way to communicate with your team.</div>
+<div class="frontapp2">>  Cost Transformation</div>
+<div class="frontapp2">>  Customer Experience</div>
+<div class="frontapp2">>  mergers and Acquisitions</div>
+<hr>
+      <div class="homelrn">learn more ></div>
+  </div>
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x220/img3.jpg" alt="vishu" class="imgb">
+
+
+      <div class="frontapp">front app</div>
+<div class="frontapp1">Discover an easier way to manage contacts, sales and grow lasting relationships.</div>
+<div class="frontapp2">>  Enterprise Technology</div>
+<div class="frontapp2">>  Private Equity</div>
+<div class="frontapp2">>  Sustainability</div>
+<hr>
+      <div class="homelrn">learn more ></div>
+    </div>
+   
+   
+  </div>
+  </div>
+        
+    </div>
+
+    <div class="developsite">
+      <div class="develop">Wow your audience from the first second</div>
+      <div class="async"><i class="bi bi-check-lg"></i>responsive  <i class="bi bi-check-lg"></i>5-star support <i class="bi bi-check-lg"></i>conatant updates</div>
+
+<div class="aboutus" id="aboutus">
+  <div class="aboutimg">
+    <img src="https://htmlstream.com/front/assets/img/1618x1010/img6.jpg" alt="" class="aboutimg1">
+    
+  </div>
+  <div class="content">
+  <div class="aboutus1"><h1 class="about">Collaborative tools to design user experience</h1>
+  
+  <p class="p1">We help businesses bring ideas to life in the digital world, by designing and implementing the technology tools that they need to win.</p>
+<p class=""><i class="bi bi-check-lg"></i> Lorem ipsum dolor sit amet.</p>
+<p class=""><i class="bi bi-check-lg"></i> Lorem ipsum dolor sit amet.</p>
+<p class=""><i class="bi bi-check-lg"></i> Lorem ipsum dolor sit amet.</p>
+<button class="aboutget">get started</button>
+<hr>
+<div class="trusted">Trusted by leading companies</div>
+<div class="iconfinder"><img src="https://htmlstream.com/front/assets/svg/brands/fitbit-dark.svg" alt="" class="iconfinderimg"><img src="https://htmlstream.com/front/assets/svg/brands/forbes-dark.svg" alt="" class="iconfinderimg"><img src="https://htmlstream.com/front/assets/svg/brands/mailchimp-dark.svg" alt="" class="iconfinderimg"><img src="https://htmlstream.com/front/assets/svg/brands/layar-dark.svg" alt="" class="iconfinderimg"></div>
+</div></div>
+    </div>
+
+
+<div class="aboutus" id="aboutus">
+  <div class="aboutimg">
+    <img src="https://htmlstream.com/front/assets/img/400x500/img31.jpg" alt="" class="aboutimg2">
+   
+  </div>
+  <div class="content">
+<img src="https://htmlstream.com/front/assets/svg/brands/mailchimp-primary.svg" alt="logo">
+  
+  <p class="p2">" I'm absolutely floored by the level of care and attention to detail the team at Htmlstream have put into this theme and for one can guarantee that I will be a return customer. "</p>
+<p class="p3">Lewis</p>
+<p class="p4">enior Director of Operations at Mailchimp</p>
+</div></div>
+    </div>
+</div>
+
+<div class="numpercentage">
+  <div class="number1">
+    <div class="number2"><i class="bi bi-arrow-down-short"></i>47%</div>
+  <div class="alphnum">fewer meetings across
+    organizations</div>
+  </div>
+  <div class="number1">
+    <div class="number2"><i class="bi bi-arrow-up-short"></i>23%</div>
+  <div class="alphnum">increase in traffic on
+    webpages with Looms</div>
+  </div>
+
+  <div class="number1">
+    <div class="number2"><i class="bi bi-arrow-up-short"></i>9.3%</div>
+  <div class="alphnum">boost in reply rates across
+    sales outreach</div>
+  </div>
+
+</div>
+
+
+
+
+<div class="eproducts123">
+  <div class="dismore">discover more</div>
+<div class="eproducts3">
+  
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x320/img33.jpg" alt="" class="imgb">
+<div class="readblg">read the blog</div>
+<div class="rdblg">Have a meaningful impact</div>
+<div class="readblg">opportunity to front who have proven to be good at executing on them</div>
+
+       </div>
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x320/img34.jpg" alt="vishu" class="imgb">
+      <div class="readblg">read the blog</div>
+      <div class="rdblg">Have a meaningful impact</div>
+      <div class="readblg"> whether you are startup or a global enterprise,learn how to integrate with front.</div>
+
+     
+    </div>
+  <div class="first blogpic">
+      <img src="https://htmlstream.com/front/assets/img/480x320/img35.jpg" alt="vishu" class="imgb">
+      <div class="readblg">read the blog</div>
+      <div class="rdblg">explore the snippets tool</div>
+      <div class="readblg"> quickly front sample components copy paste codes.</div>
+
+        </div>
+    <div class="gohere">Want to read more? <span class="go">go here ></span> </div>
+   
+   
+  </div>
+  </div>
+        
+</div>
+
+
+
+
+<div class="details">
+  <div class="about1">  
+ <div class="about"><img src="front.png" alt="front" class="frontpngimg"></div> 
+<span class="lists"><i class="bi bi-geo-alt-fill"></i>153 williamson plaza,maggieberg</span><br>
+<span class="lists"><i class="bi bi-telephone-inbound-fill"></i>+1(062)109-9222</span>
+</div>
+
+<div class="category1">
+     <div class="category">company</div>
+     <span class="lists">about</span><br>
+     <span class="lists">careers <button class="hiring">we're hiring</button></span><br>
+     <span class="lists">blogs</span><br>
+     <span class="lists">customers<i class="bi bi-arrow-up-right-square"></i></span><br>
+     <span class="lists">hire us</span><br>
+    </div>
+
+     <div class="quick1">
+     <div class="quick">features</div>
+     <span class="lists">press<i class="bi bi-arrow-up-right-square"></i></a></span><br>
+     <span class="lists">release notes</a></span><br>
+     <span class="lists">integration</a></span><br>
+     <span class="lists"> pricing</a></span><br>
+     
+     </div>
+
+    <div class="useful1">
+     <div class="useful">documentation</div>
+     <span class="lists">support </span><br>
+     <span class="lists">docs</span><br>
+     <span class="lists">status</span><br>
+     <span class="lists">api referance</span><br>
+     <span class="lists">tech requirement</span><br>
+   </div>
+   <div class="useful1">
+    <div class="useful">resource</div>
+    <span class="lists"><i class="bi bi-question-circle-fill"></i>help</span><br>
+    <span class="lists"><i class="bi bi-person-circle"></i>your account</span><br>
+    
+  </div>
+</div>
+<hr class="hrline">
+
+<div class="privacy">
+  <span class="privacy1">privacy & policy</span>
+  <span class="privacy1">/terms</span>
+  <span class="privacy1">/site map</span></div>
+  <div class="privacy2">
+  <span class="privacy3"><i class="bi bi-facebook"></i></span>
+  <span class="privacy3"><i class="bi bi-google"></i></span>
+  <span class="privacy3"><i class="bi bi-twitter"></i></span>
+  <span class="privacy3"><i class="bi bi-github"></i></span>
+  <div id="select">
+    <div class="select1">
+      <div class="opt1" id="option"> <img src="flagegypt.png" alt="" class="opticon">  english (us) <i class="bi bi-chevron-down"></i></div>
+<div class="opt2" id="opt1">
+  <div class="opt3"><img src="flagbelarus.png" alt="" class="opticon">belarus</div>
+      <div class="opt3"><img src="flagbelgium.png" alt="" class="opticon">belgium</div>
+      <div class="opt3"><img src="flagegypt.png" alt="" class="opticon">egypt</div>
+    </div>
+</div></div>
+  </div>
+
+<div class="footer">
+  <div class="footer1">© Front. 2021 Htmlstream. All rights reserved.</div>
+<div class="footer1">When you visit or interact with our sites, services or tools, we or our authorised service providers may use cookies for storing information to</div>
+<div class="footer1">help provide you with a better, faster and safer experience and for marketing purposes.</div>
+</div>
+   
+  
+<div id="bottomscroll"><a href="#parent"><i class="bi bi-chevron-up"></i></a></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+ 
+
+<script>
+  
+              new WOW().init();
+              
+let listbar=document.getElementById('listbar'),
+verticalhead=document.getElementById('verticalhead'),
+remover=document.getElementById('remover');
+
+listbar.onclick=()=>{
+  verticalhead.style.left="0px";
+}
+remover.addEventListener('click',()=>{
+  verticalhead.style.left="-1000px";
+  verticalhead.style.transition='0.5s';
+})
+
+
+ 
+
+
+
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      
+     let option=document.getElementById('option');
+     option.onmouseup=()=>{
+document.getElementById('opt1').style.display='block';
+     }
+option.onmouseleave=()=>{
+  document.getElementById('opt1').style.display="none";
+}
+
+</script>
+  </body>
+</html>
